@@ -51,6 +51,10 @@ function calc(expr){
 		}
 			
 		if((expr[i]=='+')||(expr[i]=='-')||(expr[i]=='/')||(expr[i]=='*')){
+			if(num==''){
+				num +=expr[i];
+				continue;
+			}
 			arr.push(Number(num));
 			arr.push(expr[i]);
 			num='';
