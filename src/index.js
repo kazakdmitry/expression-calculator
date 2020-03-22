@@ -138,7 +138,10 @@ function expressionCalculator(expr) {
 			number2=k;
 			k+=1;
 		}
-		k+=1;
+		if((expr[k]!=')')&&(expr[k]!='(')){
+			k+=1;
+		}
+		
 		if(number2!=0){
 			var subExpr=expr.substring(number1+1,number2);
 			var t = calc(subExpr);
